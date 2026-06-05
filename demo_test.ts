@@ -1,7 +1,7 @@
 import { assertEquals } from "@std/assert";
 import { formattedAddition } from "./demo.ts";
-import { wuerfelwurfeln, wuerfelnZusammen } from "../wuerfelfunktion.ts";
-import { zahlenErstellen, umgeklappt, gewinnfunktion } from "../brettfunktion.ts";
+import { wuerfelnZusammen, wuerfelwurfeln } from "./wuerfelfunktion.ts";
+import { zahlenErstellen, umgeklappt, gewinnfunktion } from "./brettfunktion.ts";
 
 
 Deno.test("3 + 5 = 8", function addTest() {
@@ -54,17 +54,18 @@ Deno.test("Zahlen 1 - 9 sind vorhanden", function(){
   const zahlen = zahlenErstellen();
 
   assertEquals(zahlen, [1, 2, 3, 4, 5, 6, 7, 8, 9]);
+  console.log(zahlen);
 
 });
 
 Deno.test("Zahl wird umgeklappt", function(){
 
  const zahlen = zahlenErstellen();
+console.log(zahlen)
 
+ const umgeklappteZahlen = umgeklappt(zahlen, 4);
 
- const umgeklappteZahlen = umgeklappt(zahlen, 0);
-
- assertEquals(zahlen.includes(0), true);
+ assertEquals(zahlen.includes(4), true);
  console.log(umgeklappteZahlen);
 
 
@@ -78,4 +79,19 @@ assertEquals(boolean, true);
 
 });
 
+
+Deno.test("Falls summe vorhanden, einzelne Zahlen genommen", function(){
+
+ const zahlen = zahlenErstellen();
+ console.log(zahlen)
+
+ const umgeklappteZahlen = umgeklappt(zahlen, 4);
+
+ const umgeklappteZahlenNachSumme = umgeklapptNachSumme(umgeklappteZahlen, 4);
+
+ assertEquals(umgeklappteZahlenNachSumme.includes(4, 3, 2), true);
+ console.log(umgeklappteZahlenNachSumme);
+
+ 
+});
 
