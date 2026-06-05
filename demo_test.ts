@@ -1,6 +1,7 @@
 import { assertEquals } from "@std/assert";
 import { formattedAddition } from "./demo.ts";
 
+
 Deno.test("3 + 5 = 8", function addTest() {
   // Arrange
   const a = 3;
@@ -24,3 +25,4 @@ Deno.test("3 + -5 = -2", function addTest() {
   // Then
   assertEquals(actual, "3 + -5 = -2");
 });
+
