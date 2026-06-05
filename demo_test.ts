@@ -1,7 +1,7 @@
 import { assertEquals } from "@std/assert";
 import { formattedAddition } from "./demo.ts";
 import { wuerfelwurfeln, wuerfelnZusammen } from "../wuerfelfunktion.ts";
-import { zahlenErstellen } from "../brettfunktion.ts";
+import { zahlenErstellen, umgeklappt, gewinnfunktion } from "../brettfunktion.ts";
 
 
 Deno.test("3 + 5 = 8", function addTest() {
@@ -32,7 +32,9 @@ Deno.test("Wurfel gibt Zahl 1 - 6", function(){
 
 const gewuerfelteZahl = wuerfelwurfeln();
 
+
 assertEquals(gewuerfelteZahl >= 1 && gewuerfelteZahl <= 6, true);
+
 
 
 });
@@ -43,6 +45,8 @@ Deno.test("2 Wuerfel zusammen geben 2 - 12", function(){
 
   assertEquals(gewuerfelteZahlZusammen >= 2 && gewuerfelteZahlZusammen <= 12, true);
 
+
+
 });
 
 Deno.test("Zahlen 1 - 9 sind vorhanden", function(){
@@ -52,3 +56,26 @@ Deno.test("Zahlen 1 - 9 sind vorhanden", function(){
   assertEquals(zahlen, [1, 2, 3, 4, 5, 6, 7, 8, 9]);
 
 });
+
+Deno.test("Zahl wird umgeklappt", function(){
+
+ const zahlen = zahlenErstellen();
+
+
+ const umgeklappteZahlen = umgeklappt(zahlen, 0);
+
+ assertEquals(zahlen.includes(0), true);
+ console.log(umgeklappteZahlen);
+
+
+});
+
+Deno.test("Gewinnen wenn Brett leer ist", function(){
+
+const boolean = gewinnfunktion();
+
+assertEquals(boolean, true);
+
+});
+
+
