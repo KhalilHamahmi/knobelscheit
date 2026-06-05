@@ -1,6 +1,6 @@
 import { assertEquals } from "@std/assert";
 import { formattedAddition } from "./demo.ts";
-import { wuerfelwurfeln } from "../wuerfelfunktion.ts";
+import { wuerfelwurfeln, wuerfelnZusammen } from "../wuerfelfunktion.ts";
 
 
 Deno.test("3 + 5 = 8", function addTest() {
@@ -29,9 +29,17 @@ Deno.test("3 + -5 = -2", function addTest() {
 
 Deno.test("Wurfel gibt Zahl 1 - 6", function(){
 
-const gewuerfeltezahl = wuerfelwurfeln();
+const gewuerfelteZahl = wuerfelwurfeln();
 
-assertEquals(gewuerfeltezahl >= 1 && gewuerfeltezahl <= 6, true);
+assertEquals(gewuerfelteZahl >= 1 && gewuerfelteZahl <= 6, true);
 
+
+});
+
+Deno.test("2 Wuerfel zusammen geben 2 - 12", function(){
+
+  const gewuerfelteZahlZusammen = wuerfelnZusammen();
+
+  assertEquals(gewuerfelteZahlZusammen >= 2 && gewuerfelteZahlZusammen <= 12, true);
 
 });
