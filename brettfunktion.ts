@@ -32,3 +32,12 @@ export function gewinnfunktion() : boolean{
 
 }
 
+<<<<<<< HEAD
+=======
+export function umgeklappteZahlenNachSumme(umgeklappt : number[], wuerfelnZusammen : number, wuerfelwuerfeln : number, wuerfelwurfeln2 : number ) : number[]{
+
+    if (umgeklappt.includes[wuerfelnZusammen], true)
+        
+
+}
+>>>>>>> 884dd63864595025f5439d3b8f9ada02797017fa

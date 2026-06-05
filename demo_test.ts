@@ -87,10 +87,19 @@ Deno.test("Falls summe vorhanden, einzelne Zahlen genommen", function(){
 
  const umgeklappteZahlen = umgeklappt(zahlen, 4);
 
+<<<<<<< HEAD
  /*const umgeklappteZahlenNachSumme = umgeklapptNachSumme(umgeklappteZahlen, 4);
+=======
+ const umgeklappteZahlenNachSumme = umgeklapptNachSumme(umgeklappteZahlen, 4);
+>>>>>>> 884dd63864595025f5439d3b8f9ada02797017fa
 
  assertEquals(umgeklappteZahlenNachSumme.includes(4, 3, 2), true);
  console.log(umgeklappteZahlenNachSumme);
 
  
+<<<<<<< HEAD
 });
+=======
+});
+
+>>>>>>> 884dd63864595025f5439d3b8f9ada02797017fa

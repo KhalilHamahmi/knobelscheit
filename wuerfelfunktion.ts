@@ -15,3 +15,7 @@ export function wuerfelnZusammen() : number{
 }
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 884dd63864595025f5439d3b8f9ada02797017fa
